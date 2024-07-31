@@ -1,0 +1,48 @@
+fieldset {
+  border: 0;
+}
+
+.radio-group-label {
+  font: var(--text-preset-4);
+  letter-spacing: 0px;
+  color: var(--slate-700);
+}
+
+.radio-container {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-container * {
+  cursor: pointer;
+}
+
+.radio-wrapper {
+  border: 1px solid var(--slate-500);
+  border-radius: 4px;
+  padding: 12px 0 12px 16px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  font: var(--text-preset-3);
+  letter-spacing: -1px;
+  color: var(--slate-900);
+}
+
+.checked {
+  background-color: rgba(216, 219, 47, 20%);
+  border-color: var(--highlight-color);
+}
+
+.radio-input-label {
+  width: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .radio-wrapper:hover {
+    border-color: var(--highlight-color);
+  }
+}

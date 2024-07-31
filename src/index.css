@@ -1,0 +1,76 @@
+/*
+  Elyse's customized version of Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* GLOBAL STYLES & VARIABLES */
+
+html {
+  --highlight-color: hsl(61deg, 70%, 52%);
+  --error-color: hsl(4deg, 69%, 50%);
+  --slate-900: hsl(202deg, 55%, 16%);
+  --slate-700: hsl(200deg, 24%, 40%);
+  --slate-500: hsl(200deg, 26%, 54%);
+  --slate-300: hsl(203deg, 41%, 72%);
+  --slate-100: hsl(202deg, 86%, 94%);
+  --white: hsl(0deg, 0%, 100%);
+
+  --text-preset-1: 700 normal 3.5rem/1.25 'Plus Jakarta Sans', sans-serif;
+  --text-preset-2: 700 normal 1.5rem/1.25 'Plus Jakarta Sans', sans-serif;
+  --text-preset-3: 700 normal 1.125rem/1.25 'Plus Jakarta Sans', sans-serif;
+  --text-preset-4: 500 normal 1rem/1.5 'Plus Jakarta Sans', sans-serif;
+  --text-preset-5: 500 normal 0.875rem/1.5 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--slate-100);
+}
+
+main {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

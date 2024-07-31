@@ -1,0 +1,141 @@
+/* Frontend mentor attribution styling */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* App styles */
+
+.app-container {
+  width: 1008px;
+  height: 606px;
+  background-color: var(--white);
+  border-radius: 24px;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(rgba(19, 48, 65, 0.1) 0 32px 64px);
+}
+
+.calculator,
+.results {
+  padding: 40px;
+  flex: 1 50%;
+}
+
+.calculator {
+  background-color: var(--white);
+  border-radius: 24px 0 0 24px;
+}
+
+.calc-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.input-one,
+.input-four {
+  flex-basis: 100%;
+}
+
+.input-two,
+.input-three {
+  flex: 1 40%;
+}
+
+.btnLabel {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.results {
+  background-color: var(--slate-900);
+  border-radius: 0 24px 24px 80px;
+}
+
+.results-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-placeholder > img {
+  width: 192px;
+}
+
+.results-placeholder > p {
+  text-align: center;
+}
+
+.results-display-container > p {
+  margin-top: 1rem;
+}
+
+.results-display {
+  background-color: rgba(0, 0, 0, 25%);
+  border-top: 5px solid var(--highlight-color);
+  border-radius: 8px;
+  margin-top: 40px;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.monthly-payment {
+  font: var(--text-preset-1);
+  letter-spacing: -1px;
+  color: var(--highlight-color);
+}
+
+.total-payment {
+  font: var(--text-preset-2);
+  letter-spacing: -1px;
+  color: var(--white);
+}
+
+.monthly-payment,
+.total-payment {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+hr {
+  border: 1px solid rgba(154, 190, 213, 25%);
+}
+
+h1,
+h2 {
+  font: var(--text-preset-2);
+  letter-spacing: -1px;
+}
+
+h1 {
+  color: var(--slate-900);
+}
+
+h2 {
+  color: var(--white);
+}
+
+p {
+  font: var(--text-preset-4);
+  letter-spacing: 0px;
+  color: var(--slate-300);
+}

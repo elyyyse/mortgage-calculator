@@ -1,0 +1,37 @@
+.link,
+.primary {
+  cursor: pointer;
+}
+
+.link {
+  border: 0;
+  background-color: var(--white);
+  text-decoration: underline;
+  font: var(--text-preset-4);
+  letter-spacing: 0px;
+  color: var(--slate-700);
+}
+
+.primary {
+  width: 314px;
+  height: 56px;
+  border: 0;
+  background-color: var(--highlight-color);
+  border-radius: 999px;
+  font: var(--text-preset-3);
+  letter-spacing: -1px;
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover {
+    background-color: rgba(216, 219, 47, 75%);
+  }
+
+  .link:hover {
+    color: var(--slate-900);
+  }
+}

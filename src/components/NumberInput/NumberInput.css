@@ -1,0 +1,58 @@
+/* removes number input spinwheel */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* styles begin */
+
+.number-label {
+  font: var(--text-preset-4);
+  letter-spacing: 0px;
+  color: var(--slate-700);
+}
+
+.input-wrapper {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--slate-500);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 48px;
+
+  font: var(--text-preset-3);
+  letter-spacing: -1px;
+  color: var(--slate-900);
+}
+
+.input-wrapper > input[type='number'] {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: inherit;
+  text-indent: 1rem;
+  /* padding-right: 1rem; */
+  caret-color: var(--slate-900);
+}
+
+.prefix,
+.suffix {
+  padding: 12.5px 16px;
+  background-color: var(--slate-100);
+  /* pointer-events: none; */
+}
+
+.focused {
+  border: 1px solid var(--highlight-color);
+}
+
+.focused > .prefix,
+.focused > .suffix {
+  background-color: var(--highlight-color);
+}
