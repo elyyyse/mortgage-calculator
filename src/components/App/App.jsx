@@ -106,10 +106,7 @@ function App() {
               />
               <Button type='submit' variant='primary'>
                 <span className='btnLabel'>
-                  <img
-                    src='../../../public/icon-calculator.svg'
-                    alt='Calculator icon'
-                  />
+                  <img src='/icon-calculator.svg' alt='Calculator icon' />
                   Calculate Repayments
                 </span>
               </Button>
@@ -119,7 +116,7 @@ function App() {
         <div className='results'>
           {!payment && (
             <div className='results-placeholder'>
-              <img src='../../../public/illustration-empty.svg' />
+              <img src='/illustration-empty.svg' />
               <h2>Results shown here</h2>
               <p>
                 Complete the form and click “calculate repayments” to see what
