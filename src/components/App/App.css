@@ -78,6 +78,7 @@
   width: 192px;
 }
 
+.results-placeholder > h2,
 .results-placeholder > p {
   text-align: center;
 }

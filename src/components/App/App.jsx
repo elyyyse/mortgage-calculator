@@ -116,7 +116,10 @@ function App() {
         <div className='results'>
           {!payment && (
             <div className='results-placeholder'>
-              <img src='/illustration-empty.svg' />
+              <img
+                src='/illustration-empty.svg'
+                alt='Sketch of pen, paper, a calculator, and money'
+              />
               <h2>Results shown here</h2>
               <p>
                 Complete the form and click “calculate repayments” to see what

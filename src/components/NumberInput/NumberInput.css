@@ -56,3 +56,13 @@ input[type='number'] {
 .focused > .suffix {
   background-color: var(--highlight-color);
 }
+
+.invalid {
+  border: 1px solid var(--error-color);
+}
+
+.invalid > .prefix,
+.invalid > .suffix {
+  background-color: var(--error-color);
+  color: var(--white);
+}

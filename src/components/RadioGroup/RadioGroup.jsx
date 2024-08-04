@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useId, useRef } from 'react';
 import './RadioGroup.css';
 
 function RadioGroup({
@@ -10,6 +10,10 @@ function RadioGroup({
   ...delegated
 }) {
   const id = useId();
+  const radioRef = useRef();
+
+  // const isValid = radioRef.current.validity.valid;
+
   return (
     <fieldset className={className}>
       <legend className='radio-group-label'>{legend}</legend>
@@ -27,6 +31,7 @@ function RadioGroup({
                 {...delegated}
                 type='radio'
                 id={optionId}
+                ref={radioRef}
                 name={id}
                 value={value}
                 checked={currentValue === value}
