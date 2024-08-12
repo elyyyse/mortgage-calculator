@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import {
   calculateMortgagePayment,
   calculateInterestPayment,
@@ -73,7 +73,7 @@ function App() {
                 step={1}
                 value={pounds}
                 onChange={setPounds}
-                required
+                required={true}
                 className='input-one'
               />
               <NumberInput
@@ -83,7 +83,7 @@ function App() {
                 step={1}
                 value={years}
                 onChange={setYears}
-                required
+                required={true}
                 className='input-two'
               />
               <NumberInput
@@ -93,7 +93,7 @@ function App() {
                 step={0.25}
                 value={rate}
                 onChange={setRate}
-                required
+                required={true}
                 className='input-three'
               />
               <RadioGroup

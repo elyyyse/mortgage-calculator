@@ -48,21 +48,30 @@ input[type='number'] {
   /* pointer-events: none; */
 }
 
-.focused {
-  border: 1px solid var(--highlight-color);
-}
-
-.focused > .prefix,
+/* .focused > .prefix,
 .focused > .suffix {
   background-color: var(--highlight-color);
 }
 
-.invalid {
+.focused {
+  border: 1px solid var(--highlight-color);
+} */
+
+.input-wrapper:has(input[aria-invalid='true']) {
   border: 1px solid var(--error-color);
 }
 
-.invalid > .prefix,
-.invalid > .suffix {
+.input-wrapper:has(input[aria-invalid='true']) > .prefix,
+.input-wrapper:has(input[aria-invalid='true']) > .suffix {
   background-color: var(--error-color);
   color: var(--white);
+}
+
+.input-wrapper:focus-within > .prefix,
+.input-wrapper:focus-within > .suffix {
+  background-color: var(--highlight-color);
+}
+
+.input-wrapper:focus-within {
+  border: 1px solid var(--highlight-color);
 }

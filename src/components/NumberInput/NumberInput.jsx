@@ -1,9 +1,10 @@
-import { useId, useRef, useState } from 'react';
+import { useId, useRef, useState, useEffect } from 'react';
 import './NumberInput.css';
 
 function NumberInput({
   value,
   onChange,
+  required = false,
   prefix = '',
   suffix = '',
   label,
@@ -13,6 +14,30 @@ function NumberInput({
   const [isFocused, setIsFocused] = useState(false);
   const id = useId();
   const inputRef = useRef();
+
+  // useEffect(() => {
+  //   const preventErrorMsgs = e => {
+  //     e.preventDefault();
+  //   };
+
+  //   document.addEventListener('invalid', preventErrorMsgs, true);
+
+  //   return () => {
+  //     document.removeEventListener('invalid', preventErrorMsgs, true);
+  //   };
+  // }, []);
+
+  const isValid =
+    inputRef?.current?.value === undefined || inputRef?.current?.validity.valid;
+
+  // const checkValidity = () => {
+  //   if (!required) return;
+
+  //   const input = inputRef.current;
+  //   if (input?.value !== '') {
+  //     console.log(input.value);
+  //   }
+  // };
 
   // COMPONENT SHOULDN'T CARE IF IT IS VALID OR NOT...
   // const isValid = inputRef.current ? inputRef.current.validity.valid : true;
@@ -49,6 +74,8 @@ function NumberInput({
           id={id}
           ref={inputRef}
           value={value}
+          required={required}
+          // aria-invalid={!isValid}
           onChange={e => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
