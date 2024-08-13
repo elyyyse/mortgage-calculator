@@ -9,24 +9,24 @@ import {
 } from './helpers';
 import App from './components/App';
 
-// vi.spyOn(App, 'submit').mockImplementation(() => 'submitted');
+vi.spyOn(App, 'submit').mockImplementation(() => 'submitted');
 
-// describe('App', () => {
-//   let mockSubmit;
+describe('App', () => {
+  let mockSubmit;
 
-//   beforeEach(() => {
-//     mockSubmit = vi.fn(e => e.preventDefault());
-//     render(<App submit={mockSubmit} />);
-//   });
+  beforeEach(() => {
+    mockSubmit = vi.fn(e => e.preventDefault());
+    render(<App submit={mockSubmit} />);
+  });
 
-//   it('calls `submit` function when submit button is clicked', async () => {
-//     const submitButton = screen.getByRole('button', {
-//       name: /calculate repayments/i,
-//     });
-//     await userEvent.click(submitButton);
-//     expect(mockSubmit).toHaveBeenCalledOnce();
-//   });
-// });
+  it('calls `submit` function when submit button is clicked', async () => {
+    const submitButton = screen.getByRole('button', {
+      name: /calculate repayments/i,
+    });
+    await userEvent.click(submitButton);
+    expect(mockSubmit).toHaveBeenCalledOnce();
+  });
+});
 
 describe('calculateMortgagePayment', () => {
   it('returns the correct value', () => {
